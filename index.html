@@ -1,0 +1,2720 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dessy Wedding Group — Rancang Pernikahanmu</title>
+  <meta name="description" content="Dessy Wedding Group — layanan wedding, makeup, dekorasi, dokumentasi, dan kebutuhan pernikahan lainnya di Garut dan luar kota." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f0ec;
+      --paper:#fffdfa;
+      --card:#fbf7f3;
+      --ink:#1f1a19;
+      --muted:#6f6661;
+      --line:rgba(31,26,25,.10);
+      --maroon:#8b262d;
+      --soft:#b87c80;
+      --rose:#f2e4e2;
+      --shadow:0 24px 70px rgba(32,24,20,.08);
+      --radius:28px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"DM Sans",system-ui,-apple-system,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(184,124,128,.12), transparent 32%),
+        radial-gradient(circle at 100% 12%, rgba(139,38,45,.06), transparent 28%),
+        linear-gradient(180deg,#faf6f2 0%, #f5efea 100%);
+      color:var(--ink);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    .container{width:min(var(--max),92%);margin:auto;position:relative}
+    .eyebrow{
+      font-size:11px;
+      letter-spacing:2.2px;
+      text-transform:uppercase;
+      color:var(--maroon);
+      font-weight:700;
+    }
+    .display{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(46px,7vw,88px);
+      line-height:.92;
+      letter-spacing:-2.8px;
+      font-weight:500;
+    }
+    .display em{color:var(--maroon);font-weight:500}
+    .section-title{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(34px,5vw,58px);
+      line-height:1;
+      letter-spacing:-1.6px;
+      font-weight:500;
+    }
+    .muted{color:var(--muted)}
+    .btn{
+      min-height:48px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:0 20px;
+      border-radius:16px;
+      border:1px solid transparent;
+      font-weight:600;
+      font-size:14px;
+      transition:.25s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-light{background:#fff;color:var(--ink)}
+    .btn-outline{border-color:var(--line);background:transparent}
+    .btn-maroon{background:var(--maroon);color:#fff}
+
+    /* NAV */
+    .nav-wrap{
+      position:fixed;top:14px;left:0;width:100%;z-index:1000;
+    }
+    .nav{
+      width:min(1140px,94%);
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:10px 12px 10px 16px;
+      border-radius:22px;
+      background:rgba(255,253,250,.82);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,.75);
+      box-shadow:0 12px 34px rgba(0,0,0,.07);
+    }
+    .brand{font-weight:700;font-size:14px;letter-spacing:-.2px}
+    .brand span{color:var(--maroon)}
+    .nav-links{display:flex;gap:26px;font-size:13px;color:#555}
+    .nav-links a:hover{color:var(--ink)}
+
+    /* HERO */
+    .hero{
+      display:flex;
+      align-items:center;
+      padding:110px 0 34px;
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:260px;height:260px;
+      border-radius:50%;
+      right:-80px;top:5%;
+      background:radial-gradient(circle, rgba(184,124,128,.15), transparent 70%);
+      pointer-events:none;
+      filter:blur(10px);
+    }
+    .hero .container{
+      background:rgba(255,253,250,.82);
+      border:1px solid rgba(31,26,25,.07);
+      border-radius:36px;
+      padding:44px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      backdrop-filter:blur(14px);
+    }
+    .hero .container::before{
+      content:"";
+      position:absolute;
+      width:220px;height:220px;
+      right:-90px;top:-90px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(184,124,128,.18), transparent 72%);
+      pointer-events:none;
+    }
+    .hero .container::after{
+      content:"";
+      position:absolute;
+      left:-50px;bottom:-60px;
+      width:160px;height:160px;
+      border-radius:28px;
+      background:linear-gradient(135deg, rgba(255,255,255,.45), rgba(184,124,128,.10));
+      transform:rotate(18deg);
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero-copy{max-width:850px}
+    .hero-copy p{
+      max-width:520px;
+      margin-top:16px;
+      font-size:14px;
+      line-height:1.65;
+      color:var(--muted);
+    }
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .hero-side{
+      align-self:stretch;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.55);
+      border-radius:26px;
+      padding:24px;
+      margin-bottom:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:100%;
+    }
+    .hero-side .price{
+      font-family:"Playfair Display",serif;
+      font-size:32px;
+      margin:8px 0 10px;
+    }
+    .hero-side p{color:var(--muted);font-size:13px;line-height:1.65;max-width:320px}
+    .hero-note{
+      margin-top:18px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      font-size:11px;
+      color:var(--muted);
+    }
+    .hero-note span{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(31,26,25,.07);
+    }
+
+    /* QUICK — compact smart selector */
+    .quick{padding:0 0 46px}
+    .quick-card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(23,22,22,.08);
+      background:linear-gradient(135deg,rgba(255,252,249,.98),rgba(247,239,235,.94));
+      border-radius:28px;
+      padding:18px;
+      box-shadow:0 16px 44px rgba(32,24,20,.06);
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      gap:16px;
+      align-items:center;
+    }
+    .quick-card::after{
+      content:"";
+      position:absolute;
+      width:140px;height:140px;
+      border-radius:30px;
+      right:-48px;top:-38px;
+      background:linear-gradient(135deg, rgba(184,124,128,.10), rgba(255,255,255,0));
+      pointer-events:none;
+      transform:rotate(16deg);
+    }
+    .quick-copy{padding:4px 6px 4px 4px;position:relative;z-index:1}
+    .quick-copy h2{
+      margin-top:6px;
+      font-family:"Playfair Display",serif;
+      font-size:26px;
+      font-weight:500;
+      line-height:1.06;
+      letter-spacing:-.6px;
+    }
+    .quick-copy p{margin-top:7px;color:var(--muted);font-size:12px;line-height:1.5;max-width:290px}
+    .quick-hint{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:10px;
+      font-size:10px;
+      color:#8b7f79;
+      letter-spacing:.15px;
+    }
+    .quick-hint::before{
+      content:"";
+      width:18px;height:1px;background:var(--maroon);opacity:.55;
+    }
+    .quick-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;position:relative;z-index:1}
+    .quick-option{
+      position:relative;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      gap:10px;
+      align-items:center;
+      border:1px solid rgba(23,22,22,.08);
+      background:rgba(255,255,255,.78);
+      border-radius:18px;
+      padding:12px;
+      text-align:left;
+      min-height:70px;
+      transition:.22s ease;
+      box-shadow:0 6px 18px rgba(30,22,18,.03);
+    }
+    .quick-option:hover{
+      background:#fff;
+      border-color:rgba(139,38,45,.28);
+      transform:translateY(-2px);
+      box-shadow:0 12px 28px rgba(30,22,18,.07);
+    }
+    .quick-icon{
+      width:36px;height:36px;
+      border-radius:12px;
+      display:grid;place-items:center;
+      background:#f3e5e4;
+      color:var(--maroon);
+      font-family:"Playfair Display",serif;
+      font-size:16px;
+      flex:0 0 auto;
+    }
+    .quick-meta{min-width:0}
+    .quick-option strong{display:block;font-size:13px;line-height:1.25}
+    .quick-option .quick-price{
+      display:inline-flex;
+      margin-top:5px;
+      padding:3px 7px;
+      border-radius:999px;
+      background:#f6f1ed;
+      color:#7d7470;
+      font-size:9.5px;
+      line-height:1.2;
+    }
+    .quick-arrow{
+      width:25px;height:25px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid rgba(23,22,22,.10);
+      color:#8d8681;
+      font-size:12px;
+      transition:.22s ease;
+    }
+    .quick-option:hover .quick-arrow{transform:translateX(2px);background:var(--ink);color:#fff;border-color:var(--ink)}
+
+    /* SECTIONS */
+    section{padding:52px 0}
+    .section-head{
+      display:grid;
+      grid-template-columns:.7fr 1.5fr;
+      gap:24px;
+      margin-bottom:24px;
+      align-items:end;
+    }
+    .section-head p{
+      margin-top:10px;
+      max-width:560px;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    /* PRINCIPLES */
+    .principles{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    .principle{
+      min-height:auto;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.72);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 10px 24px rgba(32,24,20,.04);
+    }
+    .principle h3{
+      font-family:"Playfair Display",serif;
+      font-size:24px;
+      font-weight:500;
+    }
+    .principle p{margin-top:8px;color:var(--muted);font-size:13px;line-height:1.6}
+
+
+    .experience-strip{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+    .exp-card{
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      box-shadow:0 12px 24px rgba(32,24,20,.04);
+    }
+    .exp-card strong{
+      display:block;
+      font-family:"Playfair Display",serif;
+      font-size:30px;
+      line-height:1;
+      color:var(--maroon);
+      font-weight:500;
+    }
+    .exp-card span{
+      display:block;
+      margin-top:10px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1.1px;
+      color:#8b7f79;
+    }
+    .exp-card p{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.55;
+    }
+
+    /* PACKAGE LADDER */
+    .package-wrap{
+      background:transparent;
+      color:#fff;
+      scroll-margin-top:96px;
+    }
+    .package-wrap .container{
+      background:linear-gradient(180deg,#221d1c 0%, #171616 100%);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:0 24px 60px rgba(24,18,18,.18);
+      overflow:visible;
+      isolation:isolate;
+    }
+    .package-wrap .container::before{
+      content:"";
+      position:absolute;
+      right:0;top:0;
+      width:180px;height:180px;
+      border-radius:0 34px 0 90px;
+      background:linear-gradient(135deg, rgba(184,124,128,.16), transparent 72%);
+      pointer-events:none;
+      z-index:-1;
+    }
+    .package-wrap .eyebrow{color:#d7a4a7}
+    .package-wrap .section-head p{color:#aaa}
+    .package-tabs{
+      position:sticky;
+      top:88px;
+      z-index:35;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin:0 0 18px;
+      padding:10px;
+      border-radius:18px;
+      background:rgba(24,22,22,.86);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+    .package-tab{
+      border:1px solid rgba(255,255,255,.14);
+      color:#ddd;
+      background:transparent;
+      border-radius:14px;
+      padding:10px 15px;
+    }
+    .package-tab.active{background:#fff;color:var(--ink);border-color:#fff}
+    .package-group{display:none}
+    .package-group.active{display:block}
+    .tier{margin-top:24px}
+    .tier-head{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:end;
+      margin-bottom:12px;
+      padding-bottom:10px;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .tier-head h3{
+      font-family:"Playfair Display",serif;
+      font-size:28px;
+      font-weight:500;
+    }
+    .tier-head span{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1.4px}
+    .package-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .package{
+      min-height:300px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:22px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      transition:.25s ease;
+      background:rgba(255,255,255,.03);
+    }
+    .package:hover{border-color:rgba(255,255,255,.35);transform:translateY(-4px)}
+    .package small{font-size:10px;color:#a78587;text-transform:uppercase;letter-spacing:1.2px}
+    .package h4{
+      font-family:"Playfair Display",serif;
+      font-size:24px;
+      font-weight:500;
+      margin-top:6px;
+    }
+    .package-price{font-size:22px;font-weight:600;margin:10px 0 14px}
+    .package ul{list-style:none;flex:1}
+    .package li{
+      padding:6px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      color:#b6afab;
+      font-size:11.5px;
+    }
+    .package .select-package{
+      margin-top:18px;
+      border:0;
+      background:#fff;
+      color:var(--ink);
+      border-radius:999px;
+      min-height:44px;
+      font-weight:600;
+    }
+
+    /* BUILDER */
+    .builder-shell{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:18px;
+      align-items:start;
+    }
+    .builder-intro{
+      position:sticky;
+      top:108px;
+      background:rgba(255,253,250,.78);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 12px 30px rgba(32,24,20,.05);
+    }
+    .builder-intro h2{margin-top:8px}
+    .builder-intro p{margin-top:10px;color:var(--muted);line-height:1.6;font-size:13px}
+    .builder-card{
+      background:rgba(255,253,250,.92);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      min-height:560px;
+      scroll-margin-top:108px;
+      backdrop-filter:blur(10px);
+    }
+    .builder-top{
+      display:flex;justify-content:space-between;gap:18px;
+      font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#888;
+    }
+    .progress{
+      height:4px;background:#e9e1db;border-radius:999px;overflow:hidden;margin:12px 0 24px;
+    }
+    .progress-bar{height:100%;background:var(--maroon);width:14.28%;transition:.3s}
+    .step{display:none}
+    .step.active{display:block;animation:fade .28s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}}
+    .step h3{
+      font-family:"Playfair Display",serif;
+      font-size:30px;
+      line-height:1.08;
+      font-weight:500;
+      margin-bottom:16px;
+    }
+    .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .choice{
+      min-height:88px;
+      text-align:left;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+      padding:16px;
+      transition:.2s;
+    }
+    .choice:hover{border-color:#777}
+    .choice.selected{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .choice strong{display:block}
+    .choice span{display:block;color:var(--muted);font-size:11px;margin-top:4px;line-height:1.45}
+    .choice.selected span{color:#aaa}
+    .multi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .multi{
+      text-align:left;
+      border:1px solid var(--line);
+      border-radius:15px;
+      padding:14px;
+      background:#fff;
+    }
+    .multi.selected{background:var(--maroon);border-color:var(--maroon);color:#fff}
+
+    .field-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+    .field{min-width:0}
+    .field label{display:block;font-size:10px;color:#777;letter-spacing:.9px;margin-bottom:5px}
+    .field input,.field select{
+      width:100%;
+      max-width:100%;
+      min-width:0;
+      min-height:50px;
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:14px;
+      padding:0 14px;
+      outline:none;
+      box-sizing:border-box;
+    }
+    .field input[type="date"]{
+      display:block;
+      width:100%;
+      min-width:0;
+      max-width:100%;
+      overflow:hidden;
+    }
+    .field input:focus,.field select:focus{border-color:var(--maroon)}
+    .builder-nav{
+      display:flex;justify-content:space-between;gap:10px;margin-top:18px;
+    }
+    .builder-nav button{
+      border:0;border-radius:999px;min-height:46px;padding:0 18px;font-weight:600;
+    }
+    .back{background:#ece6df;color:#555}
+    .next{background:var(--ink);color:#fff}
+
+    /* RESULT */
+    .result{
+      background:linear-gradient(180deg,#241e1e 0%, #181717 100%);color:#fff;border-radius:24px;padding:24px;
+    }
+    .result .eyebrow{color:#d7a4a7}
+    .result h3{
+      font-family:"Playfair Display",serif;
+      font-size:38px;
+      font-weight:500;
+      margin:6px 0 8px;
+    }
+    .result-price{font-size:31px;font-weight:700}
+    .result p{margin-top:14px;color:#aaa;line-height:1.7}
+    .summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px}
+    .summary-item{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;padding:13px;
+    }
+    .summary-item small{display:block;color:#777;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+    .summary-item strong{display:block;margin-top:3px;font-size:13px}
+    .result-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+
+    /* STICKY RESULT */
+    .sticky-result{
+      position:fixed;
+      top:80px;left:50%;transform:translate(-50%,-14px);
+      width:min(680px,92%);
+      z-index:999;
+      background:rgba(31,26,25,.95);color:#fff;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:10px 12px 10px 16px;
+      display:flex;justify-content:space-between;gap:14px;align-items:center;
+      box-shadow:0 16px 38px rgba(0,0,0,.18);
+      opacity:0;pointer-events:none;transition:.3s;
+      backdrop-filter:blur(10px);
+    }
+    .sticky-result.show{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+    .sticky-result small{display:block;color:#888;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+    .sticky-result strong{font-family:"Playfair Display",serif;font-size:18px;font-weight:500}
+    .sticky-actions{display:flex;align-items:center;gap:7px;flex:0 0 auto}
+    .sticky-close{
+      width:36px;height:36px;
+      display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:12px;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-size:21px;
+      line-height:1;
+      transition:.2s ease;
+    }
+    .sticky-close:hover{background:rgba(255,255,255,.12)}
+    .recommendation-dock{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:997;
+      max-width:min(300px,calc(100vw - 36px));
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 13px;
+      border:1px solid rgba(31,26,25,.10);
+      border-radius:16px;
+      background:rgba(255,253,250,.96);
+      color:var(--ink);
+      box-shadow:0 14px 36px rgba(32,24,20,.12);
+      backdrop-filter:blur(14px);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(8px);
+      transition:.22s ease;
+      text-align:left;
+    }
+    .recommendation-dock.show{opacity:1;visibility:visible;transform:none}
+    .recommendation-dock span{
+      flex:0 0 auto;
+      padding:5px 8px;
+      border-radius:9px;
+      background:var(--rose);
+      color:var(--maroon);
+      font-size:9px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.6px;
+    }
+    .recommendation-dock strong{
+      min-width:0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    /* FINAL */
+    .final{
+      text-align:center;
+      padding:56px 0 72px;
+    }
+    .final h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(36px,6vw,62px);
+      line-height:1;
+      letter-spacing:-1.8px;
+      font-weight:500;
+    }
+    .final p{max-width:520px;margin:14px auto 22px;color:var(--muted);line-height:1.6;font-size:14px}
+
+    footer{
+      padding:24px 0 38px;
+      color:#666;
+      font-size:12px;
+    }
+    .footer{display:flex;justify-content:space-between;gap:20px}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:.65s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    @media(max-width:960px){
+      .nav-links{display:none}
+      .hero-grid,.quick-card,.section-head,.builder-shell{grid-template-columns:1fr}
+      .hero .container{padding:28px}
+      .hero-side{padding:20px}
+      .quick-options,.package-grid{grid-template-columns:repeat(2,1fr)}
+      .quick-card{grid-template-columns:1fr;padding:18px;gap:16px}
+      .quick-copy{padding:0}
+      .builder-intro{position:static}
+      .principles{grid-template-columns:1fr}
+      .experience-strip{grid-template-columns:1fr}
+      .package-wrap .container{padding:24px}
+    }
+
+    @media(max-width:620px){
+      .nav{padding-left:14px;border-radius:18px}
+      .brand{font-size:11px}
+      .nav .btn{min-height:40px;padding:0 13px;font-size:11px;border-radius:12px}
+      .hero{padding-top:102px}
+      .hero .container{padding:20px;border-radius:28px}
+      .display{font-size:44px;letter-spacing:-1.8px}
+      .hero-copy p,.section-head p,.builder-intro p,.final p{font-size:13px}
+      .quick-options,.choice-grid,.multi-grid,.field-grid,.summary-grid,.package-grid{grid-template-columns:minmax(0,1fr)}
+      .field input[type="date"]{font-size:16px;padding-right:10px}
+      section{padding:38px 0}
+      .quick{padding-bottom:30px}
+      .section-head{gap:12px;margin-bottom:18px}
+      .builder-card{padding:18px;min-height:540px;scroll-margin-top:86px}
+      .builder-intro{padding:18px}
+      .package-wrap .container{padding:18px;border-radius:28px}
+      .package-tabs{
+        top:72px;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        padding:9px;
+        margin-left:-4px;
+        margin-right:-4px;
+        scrollbar-width:none;
+      }
+      .package-tabs::-webkit-scrollbar{display:none}
+      .package-tab{white-space:nowrap;flex:0 0 auto}
+      .tier-head{align-items:start;flex-direction:column;gap:4px}
+      .footer{flex-direction:column}
+      .sticky-result{top:68px;width:calc(100% - 24px);padding:9px 9px 9px 13px}
+      .sticky-result strong{font-size:14px}
+      .sticky-result .btn{min-height:38px;padding:0 12px;font-size:11px}
+      .sticky-close{width:34px;height:34px;border-radius:11px}
+      .recommendation-dock{right:12px;bottom:12px;max-width:calc(100vw - 24px)}
+    }
+
+
+    /* =========================================================
+       MISSY — WALKING WHATSAPP MASCOT
+    ========================================================= */
+    .missy-pet{
+      position:fixed;
+      left:18px;
+      bottom:18px;
+      width:104px;
+      height:138px;
+      z-index:9998;
+      display:block;
+      cursor:pointer;
+      user-select:none;
+      -webkit-tap-highlight-color:transparent;
+      filter:drop-shadow(0 12px 18px rgba(23,22,22,.18));
+      will-change:left,transform;
+    }
+    .missy-flip,
+    .missy-body{
+      position:absolute;
+      inset:0;
+      display:block;
+      transform-origin:center bottom;
+      pointer-events:none;
+    }
+    .missy-sprite{
+      position:absolute;
+      inset:0;
+      background-image:url("missy.png");
+      background-repeat:no-repeat;
+      background-size:400% 100%;
+      background-position:0 0;
+      animation:missyWalkFrames .54s steps(4) infinite;
+      pointer-events:none;
+      transform-origin:center bottom;
+    }
+    .missy-shadow{
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:10px;
+      height:12px;
+      border-radius:999px;
+      background:radial-gradient(ellipse at center, rgba(0,0,0,.20) 0%, rgba(0,0,0,.08) 45%, rgba(0,0,0,0) 72%);
+      animation:missyShadow .54s ease-in-out infinite alternate;
+      opacity:.85;
+      pointer-events:none;
+    }
+    .missy-pet.facing-left .missy-flip{transform:scaleX(-1)}
+    .missy-pet.is-walking .missy-body{animation:missyBodyBob .54s ease-in-out infinite alternate}
+    .missy-pet.is-paused .missy-sprite,
+    .missy-pet.is-paused .missy-body,
+    .missy-pet.is-paused .missy-shadow{animation-play-state:paused}
+    .missy-bubble{
+      position:absolute;
+      left:50%;
+      bottom:128px;
+      transform:translate(-50%,8px) scale(.94);
+      min-width:154px;
+      max-width:190px;
+      padding:10px 13px;
+      border:1px solid rgba(23,22,22,.10);
+      border-radius:16px 16px 16px 5px;
+      background:rgba(255,255,255,.96);
+      box-shadow:0 12px 38px rgba(31,22,22,.14);
+      color:var(--ink);
+      font-size:12px;
+      line-height:1.35;
+      text-align:center;
+      opacity:0;
+      visibility:hidden;
+      transition:.25s ease;
+      pointer-events:none;
+      backdrop-filter:blur(8px);
+      white-space:normal;
+    }
+    .missy-bubble strong{color:var(--maroon)}
+    .missy-pet.show-bubble .missy-bubble{
+      opacity:1;
+      visibility:visible;
+      transform:translate(-50%,0) scale(1);
+    }
+    .missy-pet:hover{filter:drop-shadow(0 14px 24px rgba(23,22,22,.25))}
+    .missy-pet:focus-visible{outline:2px solid var(--maroon);outline-offset:6px;border-radius:18px}
+    @keyframes missyWalkFrames{
+      from{background-position:0 0}
+      to{background-position:133.333% 0}
+    }
+    @keyframes missyBodyBob{
+      from{transform:translateY(0)}
+      to{transform:translateY(-4px)}
+    }
+    @keyframes missyShadow{
+      from{transform:scaleX(1) translateY(0);opacity:.16}
+      to{transform:scaleX(.88) translateY(1px);opacity:.10}
+    }
+    @media(max-width:620px){
+      .missy-pet{width:82px;height:109px;bottom:10px}
+      .missy-bubble{bottom:101px;min-width:138px;max-width:155px;font-size:11px;padding:9px 11px}
+      .missy-shadow{left:14px;right:14px;bottom:8px;height:10px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .missy-sprite,.missy-body,.missy-shadow{animation:none;background-position:0 0}
+      .missy-pet{left:16px !important;transform:none !important}
+    }
+
+
+    /* =========================================================
+       MISSY CHATBOT — PREMIUM COMPACT UI
+    ========================================================= */
+    .missy-chat{
+      position:fixed;
+      left:18px;
+      bottom:162px;
+      width:min(448px,calc(100vw - 36px));
+      max-height:min(720px,82vh);
+      z-index:10020;
+      background:rgba(252,250,248,.96);
+      border:1px solid rgba(139,38,45,.12);
+      border-radius:30px;
+      box-shadow:0 28px 90px rgba(35,24,22,.20),0 8px 24px rgba(35,24,22,.08);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(18px) scale(.96);
+      transform-origin:left bottom;
+      transition:opacity .22s ease,transform .22s ease,visibility .22s;
+      backdrop-filter:blur(22px);
+    }
+    .missy-chat::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:110px;
+      background:radial-gradient(circle at 15% 15%,rgba(184,124,128,.20),transparent 58%);
+      pointer-events:none;
+    }
+    .missy-chat.open{opacity:1;visibility:visible;transform:none}
+
+    .missy-chat-head{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:20px 20px 15px;
+      background:transparent;
+    }
+    .missy-chat-person{display:flex;align-items:center;gap:11px;min-width:0}
+    .missy-avatar{
+      width:52px;height:52px;border-radius:17px;
+      flex:0 0 auto;
+      overflow:hidden;
+      background:#f4e6e6;
+      border:1px solid rgba(139,38,45,.10);
+      box-shadow:0 6px 18px rgba(139,38,45,.10);
+      position:relative;
+    }
+    .missy-avatar::before{
+      content:"";
+      position:absolute;
+      inset:2px;
+      background-image:url("missy.png");
+      background-repeat:no-repeat;
+      background-size:400% 100%;
+      background-position:0 0;
+      transform:scale(1.55) translateY(5px);
+      transform-origin:center center;
+    }
+    .missy-chat-person strong{display:block;font-size:15px;line-height:1.2;letter-spacing:-.15px}
+    .missy-chat-person span{display:flex;align-items:center;gap:5px;margin-top:4px;color:#8a817d;font-size:11px}
+    .missy-status{width:7px;height:7px;border-radius:50%;background:#56a56f;box-shadow:0 0 0 3px rgba(86,165,111,.12)}
+    .missy-chat-close{
+      width:34px;height:34px;border:1px solid rgba(23,22,22,.08);border-radius:12px;
+      background:rgba(255,255,255,.72);font-size:18px;line-height:1;color:#655e5a;
+      display:grid;place-items:center;transition:.2s ease;
+    }
+    .missy-chat-close:hover{background:#fff;transform:rotate(4deg)}
+
+    .missy-welcome{
+      position:relative;
+      margin:0 17px 12px;
+      padding:19px 19px 18px;
+      border-radius:20px;
+      background:linear-gradient(145deg,#8b262d,#6f1e24);
+      color:#fff;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(139,38,45,.18);
+    }
+    .missy-welcome::after{
+      content:"";position:absolute;width:110px;height:110px;border:1px solid rgba(255,255,255,.12);
+      border-radius:50%;right:-38px;top:-50px;
+    }
+    .missy-welcome small{display:block;text-transform:uppercase;letter-spacing:1.4px;font-size:9.5px;color:#e8c8ca;font-weight:700}
+    .missy-welcome strong{display:block;margin-top:6px;font-family:"Playfair Display",serif;font-size:24px;font-weight:500;line-height:1.08}
+    .missy-welcome p{margin-top:7px;color:#f1dddd;font-size:12px;line-height:1.5;max-width:290px}
+
+    .missy-chat-body{
+      padding:7px 17px 13px;
+      overflow:auto;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      min-height:210px;
+      max-height:330px;
+      scroll-behavior:smooth;
+      scrollbar-width:thin;
+    }
+    .chat-row{display:flex;align-items:flex-end;gap:7px}
+    .chat-row.user{justify-content:flex-end}
+    .chat-row.bot::before{
+      content:"M";
+      width:24px;height:24px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;
+      background:#f0dfe0;color:var(--maroon);font-family:"Playfair Display",serif;font-size:12px;font-weight:600;
+    }
+    .chat-msg{
+      max-width:80%;
+      padding:12px 14px;
+      border-radius:15px;
+      font-size:13px;
+      line-height:1.55;
+      background:#fff;
+      border:1px solid rgba(23,22,22,.08);
+      color:#3e3937;
+      box-shadow:0 5px 16px rgba(30,20,18,.04);
+    }
+    .chat-row.bot .chat-msg{border-radius:6px 15px 15px 15px}
+    .chat-row.user .chat-msg{
+      background:#242020;color:#fff;border-color:#242020;
+      border-radius:15px 6px 15px 15px;
+    }
+    .chat-msg strong{color:var(--maroon)}
+    .chat-row.user .chat-msg strong{color:#fff}
+
+    .chat-suggestions-wrap{padding:0 17px 12px}
+    .chat-suggestions-label{font-size:10px;color:#9a918d;margin-bottom:7px;padding-left:2px}
+    .chat-suggestions{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0}
+    .chat-chip{
+      border:1px solid rgba(23,22,22,.08);background:rgba(255,255,255,.76);color:#4a4441;
+      border-radius:14px;padding:12px 13px;font-size:11.5px;font-weight:600;text-align:left;
+      transition:.2s ease;min-height:44px;
+    }
+    .chat-chip:hover{background:#fff1f1;border-color:#e2c5c7;transform:translateY(-1px)}
+
+    .missy-chat-footer{
+      padding:12px 15px 15px;
+      background:rgba(255,255,255,.88);
+      border-top:1px solid rgba(23,22,22,.07);
+    }
+    .missy-chat-input{
+      display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:7px;
+      padding:6px 6px 6px 14px;
+      border:1px solid rgba(23,22,22,.10);
+      border-radius:17px;background:#fff;
+      box-shadow:0 5px 18px rgba(30,20,18,.05);
+    }
+    .missy-chat-input input{
+      min-width:0;width:100%;height:40px;border:0;padding:0;background:transparent;outline:none;font-size:13px;color:#332f2d;
+    }
+    .missy-chat-input input::placeholder{color:#aaa19c}
+    .missy-chat-send{
+      width:44px;height:44px;border:0;border-radius:13px;background:var(--maroon);color:#fff;
+      font-size:16px;font-weight:700;display:grid;place-items:center;transition:.2s ease;
+    }
+    .missy-chat-send:hover{transform:translateX(1px);background:#741f25}
+    .chat-wa{
+      width:100%;margin-top:8px;border:0;border-radius:14px;padding:12px 14px;
+      text-align:center;background:#242020;color:#fff;font-size:11.5px;font-weight:700;
+      transition:.2s ease;
+    }
+    .chat-wa:hover{background:#111;transform:translateY(-1px)}
+    .chat-note{font-size:9.5px;color:#aaa09b;text-align:center;padding:8px 4px 0;line-height:1.35}
+
+    @media(max-width:620px){
+      .missy-chat{
+        left:50%;
+        right:auto;
+        bottom:auto;
+        top:50%;
+        width:calc(100vw - 24px);
+        max-width:430px;
+        max-height:86svh;
+        border-radius:26px;
+        transform:translate(-50%,-50%) scale(.96);
+        transform-origin:center center;
+      }
+      .missy-chat.open{
+        transform:translate(-50%,-50%) scale(1);
+      }
+      .missy-chat-head{padding:18px 16px 13px}
+      .missy-welcome{margin:0 13px 10px;padding:17px}
+      .missy-chat-body{
+        min-height:260px;
+        max-height:42svh;
+        padding:8px 14px 12px;
+      }
+      .chat-suggestions-wrap{padding:0 13px 11px}
+      .chat-suggestions{grid-template-columns:1fr 1fr;gap:8px}
+      .chat-chip{padding:11px 12px;min-height:44px;font-size:11.5px}
+      .missy-chat-footer{padding:11px 12px 13px}
+      .missy-chat-input input{font-size:16px}
+    }
+
+    @media(max-width:390px){
+      .missy-chat{
+        width:calc(100vw - 16px);
+        max-height:88svh;
+      }
+      .missy-chat-body{min-height:230px;max-height:40svh}
+      .chat-suggestions{grid-template-columns:1fr}
+    }
+
+
+
+    /* =========================================================
+       MISSY CHATBOT — WHATSAPP STYLE
+    ========================================================= */
+    .missy-chat{
+      left:18px;
+      bottom:162px;
+      width:min(430px,calc(100vw - 36px));
+      height:min(680px,82vh);
+      max-height:min(680px,82vh);
+      background:#efeae2;
+      border:0;
+      border-radius:22px;
+      box-shadow:0 24px 70px rgba(17,27,23,.24),0 8px 24px rgba(17,27,23,.12);
+      backdrop-filter:none;
+      transform-origin:left bottom;
+    }
+    .missy-chat::before{
+      content:"";
+      position:absolute;
+      inset:64px 0 76px;
+      height:auto;
+      background:
+        radial-gradient(circle at 18px 20px,rgba(84,110,103,.055) 0 2px,transparent 2.4px),
+        radial-gradient(circle at 48px 45px,rgba(84,110,103,.04) 0 3px,transparent 3.4px),
+        linear-gradient(35deg,transparent 47%,rgba(84,110,103,.025) 48% 52%,transparent 53%);
+      background-size:66px 66px,92px 92px,74px 74px;
+      pointer-events:none;
+      opacity:.85;
+    }
+
+    .missy-chat-head{
+      min-height:66px;
+      padding:9px 12px;
+      background:#075e54;
+      color:#fff;
+      border-radius:22px 22px 0 0;
+      box-shadow:0 1px 0 rgba(0,0,0,.08);
+      z-index:2;
+    }
+    .missy-chat-person{gap:10px}
+    .missy-avatar{
+      width:44px;height:44px;
+      border-radius:50%;
+      background:#f5e8e7;
+      border:2px solid rgba(255,255,255,.34);
+      box-shadow:none;
+    }
+    .missy-avatar::before{
+      inset:1px;
+      transform:scale(1.56) translateY(4px);
+    }
+    .missy-chat-person strong{
+      font-size:15px;
+      font-weight:600;
+      color:#fff;
+      letter-spacing:0;
+    }
+    .missy-chat-person span{
+      margin-top:2px;
+      color:rgba(255,255,255,.82);
+      font-size:11px;
+    }
+    .missy-status{
+      width:6px;height:6px;
+      background:#25d366;
+      box-shadow:none;
+    }
+    .missy-chat-close{
+      width:36px;height:36px;
+      border:0;
+      border-radius:50%;
+      background:transparent;
+      color:#fff;
+      font-size:24px;
+      box-shadow:none;
+    }
+    .missy-chat-close:hover{background:rgba(255,255,255,.10);transform:none}
+
+    .missy-chat-body{
+      position:relative;
+      z-index:1;
+      flex:1 1 auto;
+      min-height:0;
+      max-height:none;
+      padding:18px 12px 10px;
+      gap:7px;
+      background:transparent;
+    }
+    .chat-row{gap:0}
+    .chat-row.bot::before{display:none}
+    .chat-msg{
+      position:relative;
+      max-width:82%;
+      padding:8px 10px 9px;
+      border:0;
+      border-radius:8px;
+      background:#fff;
+      color:#202c33;
+      font-size:13px;
+      line-height:1.48;
+      box-shadow:0 1px 1px rgba(11,20,26,.10);
+    }
+    .chat-row.bot .chat-msg{border-radius:0 8px 8px 8px}
+    .chat-row.bot .chat-msg::before{
+      content:"";
+      position:absolute;
+      left:-7px;top:0;
+      width:0;height:0;
+      border-top:8px solid #fff;
+      border-left:8px solid transparent;
+    }
+    .chat-row.user .chat-msg{
+      background:#d9fdd3;
+      color:#202c33;
+      border:0;
+      border-radius:8px 0 8px 8px;
+    }
+    .chat-row.user .chat-msg::after{
+      content:"";
+      position:absolute;
+      right:-7px;top:0;
+      width:0;height:0;
+      border-top:8px solid #d9fdd3;
+      border-right:8px solid transparent;
+    }
+    .chat-msg strong,
+    .chat-row.user .chat-msg strong{color:#111b21}
+
+    .chat-suggestions-wrap{
+      position:relative;
+      z-index:2;
+      padding:8px 10px 9px;
+      background:rgba(239,234,226,.92);
+      border-top:1px solid rgba(17,27,33,.05);
+    }
+    .chat-suggestions-label{
+      margin:0 0 7px;
+      padding:0 3px;
+      font-size:10px;
+      color:#667781;
+    }
+    .chat-suggestions{
+      display:flex;
+      gap:6px;
+      overflow-x:auto;
+      padding:0 1px 2px;
+      scrollbar-width:none;
+    }
+    .chat-suggestions::-webkit-scrollbar{display:none}
+    .chat-chip{
+      flex:0 0 auto;
+      min-height:34px;
+      padding:8px 12px;
+      border:1px solid rgba(0,92,75,.16);
+      border-radius:999px;
+      background:#fff;
+      color:#075e54;
+      font-size:11px;
+      font-weight:600;
+      text-align:center;
+      box-shadow:0 1px 1px rgba(11,20,26,.06);
+    }
+    .chat-chip:hover{
+      background:#f7fffa;
+      border-color:rgba(0,92,75,.30);
+      transform:none;
+    }
+    .chat-chip-primary{
+      background:#d9fdd3;
+      border-color:rgba(0,92,75,.20);
+      color:#075e54;
+      font-weight:700;
+    }
+    .chat-chip-primary:hover{background:#ccf8c5}
+    .vendor-label{margin-top:9px}
+    .vendor-suggestions .chat-chip{
+      background:rgba(255,255,255,.90);
+      color:#3b4a54;
+      border-color:rgba(59,74,84,.12);
+    }
+    .vendor-suggestions .chat-chip:hover{
+      background:#fff;
+      border-color:rgba(0,92,75,.24);
+      color:#075e54;
+    }
+
+    .missy-chat-footer{
+      position:relative;
+      z-index:3;
+      padding:8px 8px 9px;
+      background:#f0f2f5;
+      border-top:1px solid rgba(17,27,33,.06);
+    }
+    .missy-chat-input{
+      grid-template-columns:minmax(0,1fr) 42px;
+      gap:7px;
+      padding:0;
+      border:0;
+      border-radius:0;
+      background:transparent;
+      box-shadow:none;
+    }
+    .missy-chat-input input{
+      height:42px;
+      padding:0 15px;
+      border-radius:22px;
+      background:#fff;
+      border:0;
+      color:#3b4a54;
+      font-size:13px;
+      box-shadow:0 1px 1px rgba(11,20,26,.04);
+    }
+    .missy-chat-input input::placeholder{color:#8696a0}
+    .missy-chat-send{
+      width:42px;height:42px;
+      border-radius:50%;
+      background:#00a884;
+      color:#fff;
+      font-size:0;
+      box-shadow:0 1px 2px rgba(0,0,0,.12);
+    }
+    .missy-chat-send::before{
+      content:"➤";
+      font-size:17px;
+      line-height:1;
+      transform:translateX(-1px);
+    }
+    .missy-chat-send:hover{background:#008f72;transform:none}
+    .chat-wa{
+      margin-top:7px;
+      min-height:38px;
+      border-radius:19px;
+      padding:9px 14px;
+      background:#25d366;
+      color:#062d22;
+      font-size:11px;
+      font-weight:700;
+      box-shadow:none;
+    }
+    .chat-wa:hover{background:#20c65d;transform:none}
+    .chat-note{
+      padding:6px 6px 0;
+      color:#7b8b93;
+      font-size:9px;
+      line-height:1.3;
+    }
+
+    @media(max-width:620px){
+      .missy-chat{
+        left:50%;
+        right:auto;
+        top:50%;
+        bottom:auto;
+        width:calc(100vw - 18px);
+        max-width:440px;
+        height:min(720px,90svh);
+        max-height:90svh;
+        border-radius:18px;
+        transform:translate(-50%,-50%) scale(.97);
+        transform-origin:center center;
+      }
+      .missy-chat.open{transform:translate(-50%,-50%) scale(1)}
+      .missy-chat-head{
+        min-height:64px;
+        padding:8px 10px;
+        border-radius:18px 18px 0 0;
+      }
+      .missy-avatar{width:43px;height:43px}
+      .missy-chat-body{
+        min-height:0;
+        max-height:none;
+        padding:16px 10px 8px;
+      }
+      .chat-msg{max-width:86%;font-size:13.5px}
+      .chat-suggestions-wrap{padding:8px 8px 7px}
+      .chat-chip{font-size:11px;padding:8px 11px}
+      .missy-chat-footer{padding:7px 7px 8px}
+      .missy-chat-input input{font-size:16px;height:44px}
+      .missy-chat-send{width:44px;height:44px}
+      .chat-wa{min-height:40px}
+    }
+
+    @media(max-width:390px){
+      .missy-chat{
+        width:calc(100vw - 10px);
+        height:92svh;
+        max-height:92svh;
+        border-radius:16px;
+      }
+      .missy-chat-head{border-radius:16px 16px 0 0}
+      .chat-suggestions{grid-template-columns:none}
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- MISSY: mascot berjalan. Klik untuk chat admin WhatsApp -->
+  <a class="missy-pet" id="missyPet" href="#" aria-label="Chat admin Dessy Wedding Group via WhatsApp">
+    <span class="missy-bubble" id="missyBubble"><strong>Hai, aku Missy ✨</strong><br>Mau tanya paket? Klik aku ya 💬</span>
+    <span class="missy-flip" aria-hidden="true">
+      <span class="missy-body">
+        <span class="missy-sprite"></span>
+        <span class="missy-shadow"></span>
+      </span>
+    </span>
+  </a>
+
+
+  <!-- MISSY CHATBOT -->
+  <section class="missy-chat" id="missyChat" aria-label="Missy DWG Assistant" aria-hidden="true">
+    <div class="missy-chat-head">
+      <div class="missy-chat-person">
+        <div class="missy-avatar" aria-hidden="true"></div>
+        <div>
+          <strong>Missy DWG</strong>
+          <span><i class="missy-status"></i>online</span>
+        </div>
+      </div>
+      <button class="missy-chat-close" id="missyChatClose" type="button" aria-label="Tutup chat">×</button>
+    </div>
+
+    <div class="missy-chat-body" id="missyChatBody">
+      <div class="chat-row bot"><div class="chat-msg">
+        Hai 👋 Aku <strong>Missy</strong>. Mau lihat paket, pilih vendor, atau langsung konsultasi online?
+      </div></div>
+    </div>
+
+    <div class="chat-suggestions-wrap">
+      <div class="chat-suggestions-label">Akses cepat</div>
+      <div class="chat-suggestions" id="missySuggestions">
+        <button class="chat-chip chat-chip-primary" type="button" data-action="consult">Konsultasi Online</button>
+        <button class="chat-chip" type="button" data-chat="paket wedding">Paket Wedding</button>
+        <button class="chat-chip" type="button" data-chat="semua vendor dwg">Semua Vendor</button>
+        <button class="chat-chip" type="button" data-chat="area layanan">Area Layanan</button>
+      </div>
+
+      <div class="chat-suggestions-label vendor-label">Vendor DWG</div>
+      <div class="chat-suggestions vendor-suggestions">
+        <button class="chat-chip" type="button" data-chat="mua dessy wedding">MUA Dessy Wedding</button>
+        <button class="chat-chip" type="button" data-chat="aesthetic decoration">Aesthetic Decoration</button>
+        <button class="chat-chip" type="button" data-chat="project by historia">Project by Historia</button>
+        <button class="chat-chip" type="button" data-chat="historia snap content creator">Historia Snap</button>
+        <button class="chat-chip" type="button" data-chat="historia attire">Historia Attire</button>
+        <button class="chat-chip" type="button" data-chat="historia musical">Historia Musical</button>
+        <button class="chat-chip" type="button" data-chat="historia's studio">Historia's Studio</button>
+        <button class="chat-chip" type="button" data-chat="g-ka wedding organizer">G-KA Wedding Organizer</button>
+      </div>
+    </div>
+
+    <div class="missy-chat-footer">
+      <form class="missy-chat-input" id="missyChatForm">
+        <input id="missyChatInput" type="text" autocomplete="off" placeholder="Ketik pesan" aria-label="Tulis pertanyaan">
+        <button class="missy-chat-send" type="submit" aria-label="Kirim">➜</button>
+      </form>
+      <button class="chat-wa" id="missyChatWa" type="button">Chat WhatsApp Admin</button>
+      <div class="chat-note">Informasi dari Missy bersifat awal. Harga dan ketersediaan final dikonfirmasi oleh tim DWG.</div>
+    </div>
+  </section>
+
+  <div class="nav-wrap">
+    <nav class="nav">
+      <a href="#" class="brand">DESSY <span>WEDDING</span> GROUP</a>
+      <div class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#paket">Paket</a>
+        <a href="#builder">Rancang</a>
+      </div>
+      <a href="#builder" class="btn btn-dark">Rancang Pernikahanmu</a>
+    </nav>
+  </div>
+
+  <div class="sticky-result" id="stickyResult">
+    <div>
+      <small>Rekomendasi kamu</small>
+      <strong id="stickyText">—</strong>
+    </div>
+    <div class="sticky-actions">
+      <button class="btn btn-light" onclick="sendWhatsApp()">WhatsApp →</button>
+      <button class="sticky-close" type="button" onclick="minimizeSticky()" aria-label="Sembunyikan rekomendasi">×</button>
+    </div>
+  </div>
+  <button class="recommendation-dock" id="recommendationDock" type="button" onclick="restoreStickyCard()" aria-label="Buka kembali rekomendasi">
+    <span>Rekomendasi</span>
+    <strong id="dockText">—</strong>
+  </button>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Dessy Wedding Group · Garut</div>
+          <h1 class="display">
+            Pernikahan yang<br>
+            sesuai <em>rencana kalian.</em>
+          </h1>
+          <p>
+            Pilih kebutuhan, tentukan budget, lalu lihat rekomendasi awal yang paling sesuai.
+          </p>
+          <div class="hero-actions">
+            <a href="#builder" class="btn btn-dark">Mulai Rancang</a>
+            <a href="#paket" class="btn btn-outline">Lihat Referensi Paket</a>
+          </div>
+          <div class="hero-note">
+            <span>Wedding mulai Rp20 juta</span>
+            <span>Makeup mulai Rp8,5 juta</span>
+            <span>Intimate mulai Rp16 juta*</span>
+          </div>
+        </div>
+
+        <aside class="hero-side">
+          <div class="eyebrow">Cara kerja kami</div>
+          <div class="price">Mulai lebih cepat.</div>
+          <p>
+            Isi data singkat, lalu sistem akan menampilkan rekomendasi awal untuk konsultasi.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <div class="quick">
+    <div class="container">
+      <div class="quick-card reveal">
+        <div class="quick-copy">
+          <div class="eyebrow">Konsultasi cepat</div>
+          <h2>Pilih titik awal.</h2>
+          <p>Pilih kategori yang paling mendekati kebutuhanmu.</p>
+          <div class="quick-hint">Bisa disesuaikan lagi</div>
+        </div>
+        <div class="quick-options">
+          <button class="quick-option" onclick="quickStart('Intimate')">
+            <span class="quick-icon">E</span>
+            <span class="quick-meta"><strong>Essential</strong><span class="quick-price">mulai Rp16 juta*</span></span>
+            <span class="quick-arrow">→</span>
+          </button>
+          <button class="quick-option" onclick="quickStart('Indoor')">
+            <span class="quick-icon">I</span>
+            <span class="quick-meta"><strong>Indoor Wedding</strong><span class="quick-price">mulai Rp22 juta</span></span>
+            <span class="quick-arrow">→</span>
+          </button>
+          <button class="quick-option" onclick="quickStart('Outdoor')">
+            <span class="quick-icon">O</span>
+            <span class="quick-meta"><strong>Outdoor Wedding</strong><span class="quick-price">mulai Rp20 juta</span></span>
+            <span class="quick-arrow">→</span>
+          </button>
+          <button class="quick-option" onclick="quickStart('Makeup')">
+            <span class="quick-icon">M</span>
+            <span class="quick-meta"><strong>Makeup & Bridal</strong><span class="quick-price">mulai Rp8,5 juta</span></span>
+            <span class="quick-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Tentang DWG</div>
+        <div>
+          <h2 class="section-title">Satu visi.<br>Satu tim.<br>Lebih mudah.</h2>
+          <p>
+            Makeup, dekorasi, dokumentasi, hiburan, dan WO tersedia dalam satu tim. Sejak <strong>2015</strong>, DWG telah menangani <strong>ribuan klien</strong> dari Garut dan luar kota.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-strip reveal">
+        <article class="exp-card">
+          <strong>2015</strong>
+          <span>Mulai Berjalan</span>
+          <p>Melayani kebutuhan pernikahan sejak 2015.</p>
+        </article>
+        <article class="exp-card">
+          <strong>Ribuan+</strong>
+          <span>Klien Ditangani</span>
+          <p>Ribuan klien telah ditangani dengan berbagai konsep acara.</p>
+        </article>
+        <article class="exp-card">
+          <strong>Garut & Luar Kota</strong>
+          <span>Area Layanan</span>
+          <p>Melayani Garut dan berbagai kota lain sesuai kebutuhan klien.</p>
+        </article>
+      </div>
+
+      <div class="principles reveal">
+        <article class="principle">
+          <h3>Fleksibel</h3>
+          <p>Paket dapat disesuaikan dengan kebutuhan dan budget.</p>
+        </article>
+        <article class="principle">
+          <h3>Terukur</h3>
+          <p>Budget dan kebutuhan dibaca sejak awal agar rekomendasinya lebih tepat.</p>
+        </article>
+        <article class="principle">
+          <h3>Satu koordinasi</h3>
+          <p>Semua kebutuhan utama dapat dikoordinasikan dalam satu tim.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="package-wrap" id="paket">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Referensi paket</div>
+        <div>
+          <h2 class="section-title">Pilihan paket<br>sesuai kebutuhan.</h2>
+          <p>
+            Gunakan paket di bawah sebagai gambaran awal. Isi dan harga akhirnya tetap menyesuaikan kebutuhan acara.
+          </p>
+        </div>
+      </div>
+
+      <div class="package-tabs reveal">
+        <button class="package-tab active" onclick="switchPackage('essential',this)">Essential</button>
+        <button class="package-tab" onclick="switchPackage('outdoor',this)">Outdoor</button>
+        <button class="package-tab" onclick="switchPackage('indoor',this)">Indoor</button>
+        <button class="package-tab" onclick="switchPackage('makeup',this)">Makeup & Bridal</button>
+      </div>
+
+      <div class="package-group active" id="essential"></div>
+      <div class="package-group" id="outdoor"></div>
+      <div class="package-group" id="indoor"></div>
+      <div class="package-group" id="makeup"></div>
+
+      <p style="margin-top:24px;color:#777;font-size:11px;line-height:1.7">
+        Harga di halaman ini menggunakan referensi pricelist 2025.
+        Penawaran terbaru tetap menyesuaikan tanggal, lokasi, venue dan kebutuhan acara.
+      </p>
+    </div>
+  </section>
+
+  <section id="builder">
+    <div class="container">
+      <div class="builder-shell">
+        <aside class="builder-intro reveal">
+          <div class="eyebrow">Rancang Pernikahanmu</div>
+          <h2 class="section-title">Rancang sesuai<br>kebutuhanmu.</h2>
+          <p>
+            Isi beberapa pertanyaan singkat untuk melihat rekomendasi awal.
+          </p>
+        </aside>
+
+        <div class="builder-card reveal">
+          <div class="builder-top">
+            <span>Konsultasi Online</span>
+            <span id="progressText">1 / 7</span>
+          </div>
+          <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+          <!-- STEP 1 -->
+          <div class="step active">
+            <h3>Pernikahan seperti apa?</h3>
+            <div class="choice-grid">
+              <button class="choice" data-value="Intimate"><strong>Essential</strong><span>Layanan inti untuk acara yang lebih sederhana.</span></button>
+              <button class="choice" data-value="Indoor"><strong>Indoor</strong><span>Gedung atau ballroom.</span></button>
+              <button class="choice" data-value="Outdoor"><strong>Outdoor</strong><span>Tenda, garden, atau area terbuka.</span></button>
+              <button class="choice" data-value="Makeup"><strong>Makeup & Bridal</strong><span>Untuk kebutuhan makeup dan busana pengantin.</span></button>
+            </div>
+            <div class="builder-nav"><span></span><button class="next" onclick="nextStep()">Lanjut →</button></div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="step">
+            <h3>Berapa perkiraan tamunya?</h3>
+            <div class="choice-grid">
+              <button class="choice" data-value="100 - 300 tamu"><strong>100–300</strong><span>Intimate scale</span></button>
+              <button class="choice" data-value="300 - 500 tamu"><strong>300–500</strong><span>Medium</span></button>
+              <button class="choice" data-value="500 - 800 tamu"><strong>500–800</strong><span>Large</span></button>
+              <button class="choice" data-value="800+ tamu"><strong>800+</strong><span>Big celebration</span></button>
+            </div>
+            <div class="builder-nav"><button class="back" onclick="prevStep()">← Kembali</button><button class="next" onclick="nextStep()">Lanjut →</button></div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="step">
+            <h3>Apa saja yang penting buat kalian?</h3>
+            <div class="multi-grid">
+              <button class="multi">Makeup & Bridal</button>
+              <button class="multi">Decoration</button>
+              <button class="multi">Photo & Video</button>
+              <button class="multi">Entertainment</button>
+              <button class="multi">Wedding Organizer</button>
+              <button class="multi">Wedding Attire</button>
+              <button class="multi">Content Creator</button>
+              <button class="multi">Catering</button>
+              <button class="multi">Venue</button>
+            </div>
+            <div class="builder-nav"><button class="back" onclick="prevStep()">← Kembali</button><button class="next" onclick="nextStep()">Lanjut →</button></div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div class="step">
+            <h3>Berapa budget yang disiapkan?</h3>
+            <div class="choice-grid">
+              <button class="choice" data-value="< Rp15 juta"><strong>&lt; Rp15 juta</strong></button>
+              <button class="choice" data-value="Rp15 - 20 juta"><strong>Rp15–20 juta</strong></button>
+              <button class="choice" data-value="Rp20 - 25 juta"><strong>Rp20–25 juta</strong></button>
+              <button class="choice" data-value="Rp25 - 30 juta"><strong>Rp25–30 juta</strong></button>
+              <button class="choice" data-value="Rp30 - 40 juta"><strong>Rp30–40 juta</strong></button>
+              <button class="choice" data-value="Rp40 - 55 juta"><strong>Rp40–55 juta</strong></button>
+              <button class="choice" data-value="Rp55 - 70 juta"><strong>Rp55–70 juta</strong></button>
+              <button class="choice" data-value="Rp70 juta+"><strong>Rp70 juta+</strong></button>
+            </div>
+            <div class="builder-nav"><button class="back" onclick="prevStep()">← Kembali</button><button class="next" onclick="nextStep()">Lanjut →</button></div>
+          </div>
+
+          <!-- STEP 5 -->
+          <div class="step">
+            <h3>Lokasi acaranya di mana?</h3>
+            <div class="field-grid">
+              <div class="field">
+                <label>AREA</label>
+                <select id="areaSelect">
+                  <option value="">Pilih area</option>
+                  <option value="Jawa Barat">Jawa Barat</option>
+                  <option value="Jabodetabek">Jabodetabek</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>KOTA / KABUPATEN</label>
+                <select id="citySelect" disabled><option value="">Pilih kota / kabupaten</option></select>
+              </div>
+              <div class="field">
+                <label>KECAMATAN</label>
+                <select id="districtSelect" disabled><option value="">Pilih kecamatan</option></select>
+              </div>
+              <div class="field" id="venueField">
+                <label>VENUE (OPSIONAL)</label>
+                <input id="venue" placeholder="Gedung / hotel / rumah">
+              </div>
+            </div>
+            <p style="margin-top:12px;color:#888;font-size:11px;line-height:1.6">
+              Kota dan kecamatan dimuat otomatis dari data wilayah Indonesia saat internet tersedia.
+            </p>
+            <div class="builder-nav"><button class="back" onclick="prevStep()">← Kembali</button><button class="next" onclick="nextStep()">Lanjut →</button></div>
+          </div>
+
+          <!-- STEP 6 -->
+          <div class="step">
+            <h3>Lengkapi data berikut.</h3>
+            <div class="field-grid">
+              <div class="field"><label>NAMA</label><input id="name" placeholder="Nama kamu"></div>
+              <div class="field"><label>TANGGAL WEDDING</label><input id="date" type="date"></div>
+            </div>
+            <div class="builder-nav"><button class="back" onclick="prevStep()">← Kembali</button><button class="next" onclick="showResult()">Lihat Rekomendasi →</button></div>
+          </div>
+
+          <!-- RESULT -->
+          <div class="step" id="resultStep">
+            <div class="result">
+              <div class="eyebrow">Rekomendasi paket</div>
+              <h3 id="resultPackage">—</h3>
+              <div class="result-price" id="resultPrice">—</div>
+              <p id="resultDescription"></p>
+
+              <div class="summary-grid">
+                <div class="summary-item"><small>Jenis</small><strong id="sumType">—</strong></div>
+                <div class="summary-item" id="summaryGuests"><small>Tamu</small><strong id="sumGuests">—</strong></div>
+                <div class="summary-item"><small>Budget</small><strong id="sumBudget">—</strong></div>
+                <div class="summary-item"><small>Lokasi</small><strong id="sumLocation">—</strong></div>
+                <div class="summary-item" id="summaryServices"><small>Kebutuhan</small><strong id="sumServices">—</strong></div>
+                <div class="summary-item"><small>Tanggal</small><strong id="sumDate">—</strong></div>
+              </div>
+
+              <div class="result-actions">
+                <button class="btn btn-light" onclick="sendWhatsApp()">Minta Penawaran via WhatsApp</button>
+                <button class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.2)" onclick="editAnswers()">Ubah Pilihan</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container reveal">
+      <h2>Sudah punya gambaran?<br><span style="color:var(--maroon)">Lanjut konsultasi.</span></h2>
+      <p>
+        Kirim hasil konsultasi ke admin agar tim kami bisa menyiapkan penawaran yang lebih sesuai.
+      </p>
+      <a href="#builder" class="btn btn-dark">Mulai Rancang</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer">
+      <div><strong>DESSY WEDDING GROUP</strong><br>Wedding services sejak 2015 · Garut dan luar kota</div>
+      <div>Garut · Jawa Barat · 0811-222-5912</div>
+    </div>
+  </footer>
+
+<script>
+/* =========================================================
+   CONFIG
+========================================================= */
+
+const WHATSAPP_NUMBER = "628112225912";
+
+/* Package data based on the 2025 DWG pricelists shared in this project.
+   Intimate is an owner-provided entry product, not from the PDFs. */
+const PACKAGE_DATA = {
+  essential: [
+    {
+      name:"Essential Wedding", category:"Essential", tier:"Essential", price:16000000,
+      display:"Mulai Rp16 juta*",
+      highlights:["Makeup & Bridal","Decoration","Photo & Video","Entertainment","MC","Henna"]
+    }
+  ],
+  outdoor: [
+    {
+      name:"Chamomile", category:"Eco Outdoor", tier:"Entry / Regular", price:20000000,
+      display:"Rp20 juta",
+      highlights:["Makeup & Bridal","Tenda 8x12","Pelaminan 6m ready stock","Entertainment","Photography","MC + Henna"]
+    },
+    {
+      name:"Dandelion", category:"Regular Outdoor", tier:"Entry / Regular", price:22500000,
+      display:"Rp22,5 juta",
+      highlights:["Makeup & Bridal","Tenda 8x12 Exclusive","Pelaminan 8m","Photo + Video","Album","Entertainment"]
+    },
+    {
+      name:"Hydragea", category:"Simple Outdoor", tier:"Entry / Regular", price:24000000,
+      display:"Rp24 juta",
+      highlights:["Makeup & Bridal","Tenda 8x12 Exclusive","Pelaminan 8m","Pergola","Photo + Video","Entertainment"]
+    },
+    {
+      name:"Magnolia", category:"Exclusive Outdoor", tier:"Exclusive", price:32000000,
+      display:"Rp32 juta",
+      highlights:["Makeup & Bridal 3x ganti","Tenda 12x12","Pelaminan 10–12m","Prewedding Unlimited","Wedding Organizer","Wedding Effect"]
+    },
+    {
+      name:"Dahlia", category:"Exclusive Outdoor", tier:"Exclusive", price:34000000,
+      display:"Rp34 juta",
+      highlights:["Makeup & Bridal 3x ganti","Tenda 12x18","Pelaminan 10–12m","Prewedding Unlimited","Wedding Organizer","Wedding Effect"]
+    },
+    {
+      name:"Cala Lily", category:"All in Exclusive Outdoor", tier:"All in Exclusive", price:49000000,
+      display:"Rp49 juta",
+      highlights:["Makeup & Bridal","Tenda 12x12","Prewedding Unlimited","Wedding Organizer","Catering 500 pax","Janur + Wedding Effect"]
+    },
+    {
+      name:"Tulip", category:"All in Exclusive Outdoor", tier:"All in Exclusive", price:51000000,
+      display:"Rp51 juta",
+      highlights:["Makeup & Bridal","Tenda 12x18","Prewedding Unlimited","Wedding Organizer","Catering 500 pax","Janur + Wedding Effect"]
+    }
+  ],
+  indoor: [
+    {
+      name:"Daisy", category:"Eco Indoor", tier:"Entry / Regular", price:22000000,
+      display:"Rp22 juta",
+      highlights:["Makeup & Bridal","Gedung kecil","Pelaminan 8–10m ready stock","Entertainment","Photography","MC + Henna"]
+    },
+    {
+      name:"Aster", category:"Regular Indoor", tier:"Entry / Regular", price:25000000,
+      display:"Rp25 juta",
+      highlights:["Makeup & Bridal","Gedung kecil","Pelaminan 8–10m bebas pilih","Panggung acrylic","Photo + Video","Album"]
+    },
+    {
+      name:"Lavender", category:"Simple Indoor", tier:"Entry / Regular", price:27000000,
+      display:"Rp27 juta",
+      highlights:["Makeup & Bridal","Gedung sedang","Pelaminan 10–12m","Panggung acrylic","Photo + Video","Entertainment"]
+    },
+    {
+      name:"Sunflower", category:"Big Indoor", tier:"Entry / Regular", price:29000000,
+      display:"Rp29 juta",
+      highlights:["Makeup & Bridal","Gedung besar","Pelaminan 12–15m","Expanded decoration","Photo + Video","Entertainment"]
+    },
+    {
+      name:"Rose", category:"Exclusive Indoor", tier:"Exclusive", price:34000000,
+      display:"Rp34 juta",
+      highlights:["Makeup & Bridal 3x ganti","Gedung sedang","Pelaminan 10–12m","Prewedding Unlimited","Wedding Organizer","Wedding Effect"]
+    },
+    {
+      name:"Orchid", category:"Exclusive Indoor", tier:"Exclusive", price:41000000,
+      display:"Rp41 juta",
+      highlights:["Makeup & Bridal","Gedung besar","Pelaminan 12–15m","Prewedding Unlimited","Wedding Organizer","Wedding Effect"]
+    },
+    {
+      name:"Gardenia", category:"All in Exclusive Indoor", tier:"All in Exclusive", price:65000000,
+      display:"Rp65 juta",
+      highlights:["Makeup & Bridal","Gedung sedang","Prewedding Unlimited","Wedding Organizer","Catering 500 pax","Venue gedung sedang"]
+    },
+    {
+      name:"Camelia", category:"All in Exclusive Indoor", tier:"All in Exclusive", price:75000000,
+      display:"Rp75 juta",
+      highlights:["Makeup & Bridal","Gedung besar","Prewedding Unlimited","Wedding Organizer","Catering 500 pax","Venue gedung besar"]
+    }
+  ],
+  makeup: [
+    {
+      name:"Camellia Charm", category:"Makeup & Bridal", tier:"Makeup & Bridal", price:8500000,
+      display:"Rp8,5 juta",
+      highlights:["Makeup Pengantin","Touch Up","1x fitting","2x pakaian pengantin","Makeup Ibu & Besan","Pager Ayu + Bagus"]
+    },
+    {
+      name:"Rosé Glow", category:"Makeup & Bridal", tier:"Makeup & Bridal", price:9500000,
+      display:"Rp9,5 juta",
+      highlights:["Makeup Pengantin","Touch Up","1x fitting","3x pakaian pengantin","Makeup Ibu & Besan","Pager Ayu + Bagus"]
+    }
+  ]
+};
+
+
+/* =========================================================
+   PACKAGE RENDERING
+========================================================= */
+
+function formatTierPackages(list){
+  const tiers = [...new Set(list.map(p=>p.tier))];
+  return tiers.map(tier=>{
+    const cards = list.filter(p=>p.tier===tier).map(p=>`
+      <article class="package">
+        <small>${p.category}</small>
+        <h4>${p.name}</h4>
+        <div class="package-price">${p.display}</div>
+        <ul>${p.highlights.map(x=>`<li>${x}</li>`).join("")}</ul>
+        <button class="select-package" onclick="selectPackage('${p.name}')">Pakai sebagai titik awal</button>
+      </article>
+    `).join("");
+    return `
+      <div class="tier">
+        <div class="tier-head">
+          <h3>${tier}</h3>
+          <span>${list.filter(p=>p.tier===tier).length} pilihan</span>
+        </div>
+        <div class="package-grid">${cards}</div>
+      </div>
+    `;
+  }).join("");
+}
+
+document.getElementById("essential").innerHTML = formatTierPackages(PACKAGE_DATA.essential);
+document.getElementById("outdoor").innerHTML = formatTierPackages(PACKAGE_DATA.outdoor);
+document.getElementById("indoor").innerHTML = formatTierPackages(PACKAGE_DATA.indoor);
+document.getElementById("makeup").innerHTML = formatTierPackages(PACKAGE_DATA.makeup);
+
+function switchPackage(id,btn){
+  document.querySelectorAll(".package-group").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".package-tab").forEach(x=>x.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  btn.classList.add("active");
+}
+
+function selectPackage(name){
+  const all = [...PACKAGE_DATA.essential,...PACKAGE_DATA.outdoor,...PACKAGE_DATA.indoor,...PACKAGE_DATA.makeup];
+  const pkg = all.find(p=>p.name===name);
+  if(!pkg) return;
+  if(PACKAGE_DATA.essential.includes(pkg)) quickStart("Intimate");
+  if(PACKAGE_DATA.outdoor.includes(pkg)) quickStart("Outdoor");
+  if(PACKAGE_DATA.indoor.includes(pkg)) quickStart("Indoor");
+  if(PACKAGE_DATA.makeup.includes(pkg)) quickStart("Makeup");
+  state.forcedPackage = pkg.name;
+}
+
+/* =========================================================
+   BUILDER STATE
+========================================================= */
+
+const steps = document.querySelectorAll(".builder-card .step");
+let currentStep = 0;
+let stickyMinimized = false;
+
+let state = {
+  type:"",
+  guests:"",
+  services:[],
+  budget:"",
+  area:"",
+  city:"",
+  district:"",
+  venue:"",
+  name:"",
+  date:"",
+  recommendedPackage:"",
+  recommendedCategory:"",
+  recommendedPrice:"",
+  forcedPackage:""
+};
+
+function invalidateRecommendation(){
+  state.forcedPackage="";
+  state.recommendedPackage="";
+  state.recommendedCategory="";
+  state.recommendedPrice="";
+  stickyMinimized=false;
+  document.getElementById("stickyResult")?.classList.remove("show");
+  document.getElementById("recommendationDock")?.classList.remove("show");
+}
+
+document.querySelectorAll(".choice").forEach(btn=>{
+  btn.addEventListener("click",function(){
+    invalidateRecommendation();
+    const step=this.closest(".step");
+    step.querySelectorAll(".choice").forEach(x=>x.classList.remove("selected"));
+    this.classList.add("selected");
+  });
+});
+
+document.querySelectorAll(".multi").forEach(btn=>{
+  btn.addEventListener("click",function(){
+    invalidateRecommendation();
+    this.classList.toggle("selected");
+  });
+});
+
+function getBuilderRoute(){
+  // Makeup & Bridal tidak perlu pertanyaan tamu, kebutuhan wedding, atau venue.
+  return state.type==="Makeup" ? [0,3,4,5,6] : [0,1,2,3,4,5,6];
+}
+
+function updateMakeupFlowUI(){
+  const isMakeup=state.type==="Makeup";
+  const venueField=document.getElementById("venueField");
+  if(venueField) venueField.style.display=isMakeup ? "none" : "block";
+
+  // Bersihkan state wedding-only supaya data lama tidak ikut ke hasil.
+  if(isMakeup){
+    state.guests="";
+    state.services=[];
+    state.venue="-";
+    document.querySelectorAll(".multi.selected").forEach(x=>x.classList.remove("selected"));
+  }
+}
+
+function updateProgress(){
+  const route=getBuilderRoute();
+  const routeIndex=Math.max(0,route.indexOf(currentStep));
+  const pct=((routeIndex+1)/route.length)*100;
+  document.getElementById("progressBar").style.width=pct+"%";
+  document.getElementById("progressText").innerText=`${routeIndex+1} / ${route.length}`;
+}
+
+function keepBuilderInView(behavior="smooth"){
+  const card=document.querySelector(".builder-card");
+  if(!card)return;
+
+  requestAnimationFrame(()=>{
+    const navOffset=window.innerWidth < 620 ? 88 : 112;
+    const y=card.getBoundingClientRect().top + window.scrollY - navOffset;
+    window.scrollTo({top:y,behavior});
+  });
+}
+
+function goToStep(stepIndex){
+  steps[currentStep].classList.remove("active");
+  currentStep=stepIndex;
+  steps[currentStep].classList.add("active");
+  updateMakeupFlowUI();
+  updateProgress();
+  keepBuilderInView();
+}
+
+function nextStep(){
+  const step = steps[currentStep];
+
+  if(currentStep===0 || currentStep===1 || currentStep===3){
+    const selected=step.querySelector(".choice.selected");
+    if(!selected){alert("Pilih salah satu dulu ya.");return;}
+    if(currentStep===0){
+      state.type=selected.dataset.value;
+      updateMakeupFlowUI();
+    }
+    if(currentStep===1) state.guests=selected.dataset.value;
+    if(currentStep===3) state.budget=selected.dataset.value;
+  }
+
+  if(currentStep===2){
+    state.services=[...document.querySelectorAll(".multi.selected")].map(x=>x.innerText.trim());
+  }
+
+  if(currentStep===4){
+    const area=document.getElementById("areaSelect").value;
+    const city=document.getElementById("citySelect").value;
+    const district=document.getElementById("districtSelect").value;
+    if(!area || !city || !district){alert("Pilih area, kota/kabupaten dan kecamatan dulu ya.");return;}
+    state.area=area;state.city=city;state.district=district;
+    state.venue=state.type==="Makeup" ? "-" : (document.getElementById("venue").value || "-");
+  }
+
+  const route=getBuilderRoute();
+  const pos=route.indexOf(currentStep);
+  const next=route[Math.min(pos+1,route.length-1)];
+  goToStep(next);
+}
+
+function prevStep(){
+  const route=getBuilderRoute();
+  const pos=route.indexOf(currentStep);
+  const prev=route[Math.max(pos-1,0)];
+  goToStep(prev);
+}
+
+function quickStart(type){
+  invalidateRecommendation();
+  state.type=type;
+  const first=steps[0];
+  first.querySelectorAll(".choice").forEach(btn=>{
+    btn.classList.toggle("selected",btn.dataset.value===type);
+  });
+  updateMakeupFlowUI();
+  updateProgress();
+  keepBuilderInView();
+}
+
+function editAnswers(){
+  invalidateRecommendation();
+  steps[currentStep].classList.remove("active");
+  currentStep=0;
+  steps[currentStep].classList.add("active");
+  updateMakeupFlowUI();
+  updateProgress();
+  keepBuilderInView();
+}
+
+/* =========================================================
+   LOCATION SELECTOR
+   Uses a public Indonesian administrative-area API when online.
+========================================================= */
+
+const EMSIFA = "https://www.emsifa.com/api-wilayah-indonesia/api";
+
+const areaSelect = document.getElementById("areaSelect");
+const citySelect = document.getElementById("citySelect");
+const districtSelect = document.getElementById("districtSelect");
+
+const JABODETABEK_NAMES = [
+  "KOTA ADM. JAKARTA PUSAT","KOTA ADM. JAKARTA UTARA","KOTA ADM. JAKARTA BARAT",
+  "KOTA ADM. JAKARTA TIMUR","KOTA ADM. JAKARTA SELATAN",
+  "KAB. BOGOR","KOTA BOGOR","KOTA DEPOK","KAB. BEKASI","KOTA BEKASI",
+  "KAB. TANGERANG","KOTA TANGERANG","KOTA TANGERANG SELATAN"
+];
+
+// Prioritas area terdekat dengan basis operasional Garut–Bandung.
+// Setelah daftar ini, wilayah Jawa Barat lainnya tetap A–Z.
+const JABAR_PRIORITY = [
+  "KAB. GARUT",
+  "KOTA BANDUNG",
+  "KAB. BANDUNG",
+  "KAB. BANDUNG BARAT",
+  "KOTA CIMAHI",
+  "KAB. SUMEDANG",
+  "KAB. TASIKMALAYA",
+  "KOTA TASIKMALAYA"
+];
+
+function sortJawaBaratCities(cities){
+  const priorityIndex = new Map(JABAR_PRIORITY.map((name,index)=>[name,index]));
+  return [...cities].sort((a,b)=>{
+    const ai = priorityIndex.has(a.name) ? priorityIndex.get(a.name) : 999;
+    const bi = priorityIndex.has(b.name) ? priorityIndex.get(b.name) : 999;
+    if(ai !== bi) return ai - bi;
+    return prettyName(a.name).localeCompare(prettyName(b.name), "id");
+  });
+}
+
+async function loadCities(){
+  citySelect.innerHTML='<option value="">Memuat...</option>';
+  citySelect.disabled=true;
+  districtSelect.innerHTML='<option value="">Pilih kecamatan</option>';
+  districtSelect.disabled=true;
+
+  const area=areaSelect.value;
+  if(!area){
+    citySelect.innerHTML='<option value="">Pilih kota / kabupaten</option>';
+    return;
+  }
+
+  try{
+    let cities=[];
+    if(area==="Jawa Barat"){
+      cities=await fetch(`${EMSIFA}/regencies/32.json`).then(r=>r.json());
+      cities=sortJawaBaratCities(cities);
+    }else{
+      const [jakarta,jabar,banten]=await Promise.all([
+        fetch(`${EMSIFA}/regencies/31.json`).then(r=>r.json()),
+        fetch(`${EMSIFA}/regencies/32.json`).then(r=>r.json()),
+        fetch(`${EMSIFA}/regencies/36.json`).then(r=>r.json())
+      ]);
+      cities=[...jakarta,...jabar,...banten]
+        .filter(x=>JABODETABEK_NAMES.includes(x.name))
+        .sort((a,b)=>prettyName(a.name).localeCompare(prettyName(b.name), "id"));
+    }
+
+    citySelect.innerHTML='<option value="">Pilih kota / kabupaten</option>'+
+      cities.map(x=>`<option value="${x.id}" data-name="${x.name}">${prettyName(x.name)}</option>`).join("");
+    citySelect.disabled=false;
+  }catch(e){
+    citySelect.innerHTML=`
+      <option value="">Data wilayah gagal dimuat</option>
+      <option value="manual-garut" data-name="Kabupaten Garut">Kabupaten Garut</option>
+      <option value="manual-bandung" data-name="Kota Bandung">Kota Bandung</option>
+      <option value="manual-jakarta" data-name="Jakarta Selatan">Jakarta Selatan</option>
+    `;
+    citySelect.disabled=false;
+  }
+}
+
+async function loadDistricts(){
+  districtSelect.innerHTML='<option value="">Memuat...</option>';
+  districtSelect.disabled=true;
+  const cityId=citySelect.value;
+  if(!cityId){
+    districtSelect.innerHTML='<option value="">Pilih kecamatan</option>';return;
+  }
+
+  if(cityId.startsWith("manual-")){
+    districtSelect.innerHTML='<option value="Manual">Isi detail kecamatan via WhatsApp</option>';
+    districtSelect.disabled=false;return;
+  }
+
+  try{
+    const districts=await fetch(`${EMSIFA}/districts/${cityId}.json`).then(r=>r.json());
+    districts.sort((a,b)=>prettyName(a.name).localeCompare(prettyName(b.name), "id"));
+    districtSelect.innerHTML='<option value="">Pilih kecamatan</option>'+
+      districts.map(x=>`<option value="${x.name}">${prettyName(x.name)}</option>`).join("");
+    districtSelect.disabled=false;
+  }catch(e){
+    districtSelect.innerHTML='<option value="Manual">Isi detail kecamatan via WhatsApp</option>';
+    districtSelect.disabled=false;
+  }
+}
+
+function prettyName(name){
+  return name
+    .toLowerCase()
+    .replace(/\b\w/g,c=>c.toUpperCase())
+    .replace("Kab.","Kabupaten")
+    .replace("Kota Adm.","Jakarta");
+}
+
+areaSelect.addEventListener("change",()=>{ invalidateRecommendation(); loadCities(); });
+citySelect.addEventListener("change",()=>{ invalidateRecommendation(); loadDistricts(); });
+districtSelect.addEventListener("change",invalidateRecommendation);
+document.getElementById("venue")?.addEventListener("input",invalidateRecommendation);
+document.getElementById("name")?.addEventListener("input",invalidateRecommendation);
+document.getElementById("date")?.addEventListener("change",invalidateRecommendation);
+
+/* =========================================================
+   RECOMMENDATION ENGINE
+========================================================= */
+
+function budgetCap(){
+  const map={
+    "< Rp15 juta":15000000,
+    "Rp15 - 20 juta":20000000,
+    "Rp20 - 25 juta":25000000,
+    "Rp25 - 30 juta":30000000,
+    "Rp30 - 40 juta":40000000,
+    "Rp40 - 55 juta":55000000,
+    "Rp55 - 70 juta":70000000,
+    "Rp70 juta+":999999999
+  };
+  return map[state.budget] || 0;
+}
+
+function chooseByBudget(list){
+  const cap=budgetCap();
+  const eligible=list.filter(p=>p.price<=cap);
+  if(eligible.length) return eligible[eligible.length-1];
+  return list[0];
+}
+
+function getRecommendation(){
+  if(state.forcedPackage){
+    const all=[...PACKAGE_DATA.essential,...PACKAGE_DATA.outdoor,...PACKAGE_DATA.indoor,...PACKAGE_DATA.makeup];
+    const forced=all.find(x=>x.name===state.forcedPackage);
+    if(forced) return forced;
+  }
+
+  if(state.type==="Makeup"){
+    return chooseByBudget(PACKAGE_DATA.makeup);
+  }
+
+  if(state.type==="Intimate"){
+    return PACKAGE_DATA.essential[0];
+  }
+
+  const source = state.type==="Outdoor" ? PACKAGE_DATA.outdoor : PACKAGE_DATA.indoor;
+  const cap = budgetCap();
+  const wantsCatering = state.services.includes("Catering");
+  const wantsVenue = state.services.includes("Venue");
+
+  if(state.type==="Outdoor" && wantsCatering && cap>=49000000){
+    return cap>=51000000 ? PACKAGE_DATA.outdoor.find(x=>x.name==="Tulip") : PACKAGE_DATA.outdoor.find(x=>x.name==="Cala Lily");
+  }
+
+  if(state.type==="Indoor" && (wantsCatering || wantsVenue) && cap>=65000000){
+    return cap>=75000000 ? PACKAGE_DATA.indoor.find(x=>x.name==="Camelia") : PACKAGE_DATA.indoor.find(x=>x.name==="Gardenia");
+  }
+
+  if(state.guests==="800+ tamu"){
+    const preferred = source.filter(x=>x.tier!=="Entry / Regular");
+    return chooseByBudget(preferred);
+  }
+
+  return chooseByBudget(source);
+}
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+function showResult(){
+  state.name=document.getElementById("name").value || "-";
+  state.date=document.getElementById("date").value || "-";
+
+  if(!state.area || !state.city || !state.district){
+    state.area=areaSelect.value;
+    const cityOpt=citySelect.options[citySelect.selectedIndex];
+    state.city=cityOpt?.dataset?.name || cityOpt?.text || "-";
+    state.district=districtSelect.value || "-";
+    state.venue=document.getElementById("venue").value || "-";
+  }else{
+    const cityOpt=citySelect.options[citySelect.selectedIndex];
+    state.city=cityOpt?.dataset?.name || cityOpt?.text || state.city;
+  }
+
+  const pkg=getRecommendation();
+
+  state.recommendedPackage=pkg.name;
+  state.recommendedCategory=pkg.category || "Essential / Intimate";
+  state.recommendedPrice=pkg.display;
+
+  document.getElementById("resultPackage").innerText=pkg.name;
+  document.getElementById("resultPrice").innerText=pkg.display;
+  document.getElementById("resultDescription").innerText=
+    "Ini titik awal berdasarkan pilihanmu. Tim DWG akan menyesuaikan penawaran final dengan detail kebutuhan, lokasi dan tanggal acara.";
+
+  const isMakeup=state.type==="Makeup";
+  document.getElementById("sumType").innerText=isMakeup ? "Makeup & Bridal" : state.type;
+  document.getElementById("sumGuests").innerText=state.guests || "—";
+  document.getElementById("sumBudget").innerText=state.budget;
+  document.getElementById("sumLocation").innerText=`${state.district}, ${state.city} — ${state.area}`;
+  document.getElementById("sumServices").innerText=state.services.length?state.services.join(", "):"—";
+  document.getElementById("sumDate").innerText=state.date;
+  document.getElementById("summaryGuests").style.display=isMakeup ? "none" : "block";
+  document.getElementById("summaryServices").style.display=isMakeup ? "none" : "block";
+
+  steps[currentStep].classList.remove("active");
+  currentStep=6;
+  steps[currentStep].classList.add("active");
+  updateProgress();
+
+  localStorage.setItem("dwgMinimalConsultation",JSON.stringify(state));
+  showSticky();
+}
+
+function showSticky(){
+  if(!state.recommendedPackage)return;
+  const text=`${state.recommendedPackage} · ${state.recommendedPrice}`;
+  document.getElementById("stickyText").innerText=text;
+  document.getElementById("dockText").innerText=text;
+
+  if(stickyMinimized){
+    document.getElementById("stickyResult").classList.remove("show");
+    document.getElementById("recommendationDock").classList.add("show");
+    return;
+  }
+
+  document.getElementById("recommendationDock").classList.remove("show");
+  document.getElementById("stickyResult").classList.add("show");
+}
+
+function minimizeSticky(){
+  stickyMinimized=true;
+  document.getElementById("stickyResult")?.classList.remove("show");
+  if(state.recommendedPackage){
+    const text=`${state.recommendedPackage} · ${state.recommendedPrice}`;
+    document.getElementById("dockText").innerText=text;
+    document.getElementById("recommendationDock")?.classList.add("show");
+  }
+}
+
+function restoreStickyCard(){
+  stickyMinimized=false;
+  document.getElementById("recommendationDock")?.classList.remove("show");
+  showSticky();
+}
+
+function restoreSaved(){
+  const saved=localStorage.getItem("dwgMinimalConsultation");
+  if(!saved)return;
+  try{
+    state={...state,...JSON.parse(saved)};
+
+    // Jangan pertahankan paket yang pernah dipaksa dari sesi lama.
+    // Rekomendasi harus mengikuti jawaban terbaru.
+    state.forcedPackage="";
+
+    if(state.type && state.budget){
+      const pkg=getRecommendation();
+      if(pkg){
+        state.recommendedPackage=pkg.name;
+        state.recommendedCategory=pkg.category || "Essential / Intimate";
+        state.recommendedPrice=pkg.display;
+      }
+    }
+
+    showSticky();
+  }catch(e){}
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+function sendWhatsApp(){
+  const isMakeup=state.type==="Makeup";
+  const services=state.services.length?state.services.map(x=>"• "+x).join("\n"):"• Belum dipilih";
+
+  const weddingDetails = isMakeup ? "" : `
+Venue:
+${state.venue}
+
+Jumlah Tamu:
+${state.guests}
+
+Kebutuhan:
+${services}
+`;
+
+  const message=`Halo Dessy Wedding Group 👋
+
+Saya ingin konsultasi ${isMakeup ? "Makeup & Bridal" : "kebutuhan wedding"}.
+
+Nama:
+${state.name}
+
+Tanggal:
+${state.date}
+
+Area:
+${state.area}
+
+Kota / Kabupaten:
+${state.city}
+
+Kecamatan:
+${state.district}
+${weddingDetails}
+Jenis:
+${isMakeup ? "Makeup & Bridal" : state.type}
+
+Budget:
+${state.budget}
+
+Rekomendasi Website:
+${state.recommendedPackage}
+
+Kategori:
+${state.recommendedCategory}
+
+Harga Referensi:
+${state.recommendedPrice}
+
+Mohon dibantu dibuatkan rekomendasi paket dan penawaran harga terbaru yang paling sesuai.
+
+Terima kasih.`;
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+}
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
+},{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+restoreSaved();
+
+/* =========================================================
+   MISSY — WALKING MASCOT + WHATSAPP
+========================================================= */
+(function initMissy(){
+  const pet = document.getElementById("missyPet");
+  const bubble = document.getElementById("missyBubble");
+  if(!pet) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const messages = [
+    "<strong>Hai, aku Missy ✨</strong><br>Mau tanya paket? Klik aku ya 💬",
+    "<strong>Masih bingung pilih paket?</strong><br>Aku bisa bantu jelaskan 💬",
+    "<strong>Sudah punya tanggal acara?</strong><br>Klik aku untuk konsultasi 🤍",
+    "<strong>DWG sejak 2015 ✨</strong><br>Melayani Garut dan luar kota.",
+    "<strong>Mau menyesuaikan paket?</strong><br>Tanya kebutuhan kamu di sini."
+  ];
+
+  function openMissyChat(e){
+    e.preventDefault();
+    if(typeof window.toggleMissyChat === "function") window.toggleMissyChat(true);
+  }
+  pet.addEventListener("click", openMissyChat);
+
+  if(reducedMotion){
+    pet.classList.add("is-paused", "show-bubble");
+    return;
+  }
+
+  let x = 18;
+  let direction = 1;
+  let speed = window.innerWidth < 620 ? 0.38 : 0.52;
+  let pauseUntil = performance.now() + 1500;
+  let nextPauseAt = performance.now() + 5200;
+  let bubbleTimer;
+  let hoverPause = false;
+
+  function maxX(){
+    const shortTrack = window.innerWidth < 620 ? 72 : 118;
+    return 18 + shortTrack;
+  }
+
+  function setDirection(){
+    pet.classList.toggle("facing-left", direction < 0);
+  }
+
+  function syncState(now = performance.now()){
+    const speaking = pet.classList.contains("show-bubble");
+    const paused = hoverPause || speaking || now < pauseUntil;
+    pet.classList.toggle("is-paused", paused);
+    pet.classList.toggle("is-walking", !paused);
+  }
+
+  function showBubble(duration=2600){
+    bubble.innerHTML = messages[Math.floor(Math.random()*messages.length)];
+    pet.classList.add("show-bubble");
+    syncState();
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(()=>{
+      pet.classList.remove("show-bubble");
+      syncState();
+    }, duration);
+  }
+
+  function animate(now){
+    const limit = maxX();
+    const speaking = pet.classList.contains("show-bubble");
+
+    if(now >= pauseUntil && !hoverPause && !speaking){
+      x += speed * direction;
+      if(x >= limit){
+        x = limit;
+        direction = -1;
+        setDirection();
+        pauseUntil = now + 650;
+      } else if(x <= 18){
+        x = 18;
+        direction = 1;
+        setDirection();
+        pauseUntil = now + 650;
+      }
+      pet.style.left = x + "px";
+    }
+
+    if(now >= nextPauseAt && now >= pauseUntil && !hoverPause && !speaking){
+      showBubble(2300);
+      pauseUntil = now + 2350;
+      nextPauseAt = now + 8500 + Math.random()*5500;
+    }
+
+    syncState(now);
+    requestAnimationFrame(animate);
+  }
+
+  pet.addEventListener("mouseenter", ()=>{
+    hoverPause = true;
+    syncState();
+  });
+
+  pet.addEventListener("mouseleave", ()=>{
+    hoverPause = false;
+    syncState();
+  });
+
+  window.addEventListener("resize", ()=>{
+    speed = window.innerWidth < 620 ? 0.38 : 0.52;
+    x = Math.min(x, maxX());
+    pet.style.left = x + "px";
+  });
+
+  setTimeout(()=>showBubble(3000), 900);
+  setDirection();
+  syncState();
+  requestAnimationFrame(animate);
+})();
+
+
+/* =========================================================
+   MISSY CHATBOT — FAQ / GUIDED ASSISTANT
+========================================================= */
+(function initMissyChatbot(){
+  const panel=document.getElementById("missyChat");
+  const body=document.getElementById("missyChatBody");
+  const form=document.getElementById("missyChatForm");
+  const input=document.getElementById("missyChatInput");
+  const closeBtn=document.getElementById("missyChatClose");
+  const waBtn=document.getElementById("missyChatWa");
+  const chips=document.querySelectorAll("[data-chat]");
+  const actionChips=document.querySelectorAll("[data-action]");
+  if(!panel||!body||!form||!input) return;
+
+  let chatHistory=[];
+
+  window.toggleMissyChat=function(open){
+    const shouldOpen = typeof open === "boolean" ? open : !panel.classList.contains("open");
+    panel.classList.toggle("open",shouldOpen);
+    panel.setAttribute("aria-hidden", shouldOpen ? "false" : "true");
+    const pet=document.getElementById("missyPet");
+    if(pet){
+      pet.classList.toggle("is-paused",shouldOpen);
+      pet.classList.remove("show-bubble");
+    }
+    if(shouldOpen) setTimeout(()=>input.focus(),180);
+  };
+
+  function addMessage(text,who="bot"){
+    const row=document.createElement("div");
+    row.className=`chat-row ${who}`;
+    const msg=document.createElement("div");
+    msg.className="chat-msg";
+    msg.innerHTML=text;
+    row.appendChild(msg);
+    body.appendChild(row);
+    body.scrollTop=body.scrollHeight;
+    chatHistory.push({who,text:text.replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim()});
+  }
+
+  function packageSummary(category){
+    try{
+      const list=PACKAGE_DATA?.[category]||[];
+      if(!list.length) return "";
+      return list.slice(0,4).map(p=>`<strong>${p.name}</strong> — ${p.display}`).join("<br>");
+    }catch(e){return "";}
+  }
+
+  function answer(raw){
+    const q=raw.toLowerCase().trim();
+    if(!q) return "Tulis pertanyaannya dulu ya 😊";
+
+    if(/halo|hai|hi|pagi|siang|malam/.test(q))
+      return "Hai 👋 Aku Missy. Kamu mau cari informasi <strong>paket wedding</strong>, <strong>Makeup & Bridal</strong>, atau mulai dari budget?";
+
+    if(/2015|pengalaman|berapa lama|tentang dwg/.test(q))
+      return "Dessy Wedding Group sudah melayani kebutuhan pernikahan sejak <strong>2015</strong> dan telah menangani <strong>ribuan klien</strong> dari Garut maupun luar kota.";
+
+    if(/semua vendor|vendor dwg|daftar vendor|vendor apa|layanan apa/.test(q))
+      return "Vendor dan layanan Dessy Wedding Group:<br><br><strong>MUA Dessy Wedding</strong> — Makeup & Bridal<br><strong>Aesthetic Decoration</strong> — Dekorasi<br><strong>Project by Historia</strong> — Foto & Video<br><strong>Historia Snap</strong> — Wedding Content Creator<br><strong>Historia Attire</strong> — Busana<br><strong>Historia Musical</strong> — Musik & Entertainment<br><strong>Historia's Studio</strong> — Studio Foto<br><strong>G-KA Wedding Organizer</strong> — Wedding Organizer<br><br>Pilih bubble vendor di bawah untuk melihat keterangannya.";
+
+    if(/aesthetic decoration|aesthetic|dekorasi|decoration/.test(q))
+      return "<strong>Aesthetic Decoration</strong> menangani kebutuhan dekorasi wedding, baik untuk konsep indoor maupun outdoor. Detail desain dan kebutuhan dekor akan disesuaikan dengan konsep, venue, dan budget.";
+
+    if(/project by historia|pbh|photo|video|foto|dokumentasi/.test(q))
+      return "<strong>Project by Historia</strong> menangani dokumentasi foto dan video untuk wedding maupun kebutuhan prewedding. Tim akan menyesuaikan kebutuhan dokumentasi dengan konsep acara.";
+
+    if(/historia musical|musik|entertainment|band/.test(q))
+      return "<strong>Historia Musical</strong> menangani kebutuhan musik dan entertainment untuk acara. Format penampilan dapat disesuaikan dengan konsep dan kebutuhan wedding.";
+
+    if(/g-ka|gka|wedding organizer|\bwo\b/.test(q))
+      return "<strong>G-KA Wedding Organizer</strong> menangani koordinasi acara dan kebutuhan operasional hari H agar setiap bagian acara berjalan sesuai rundown.";
+
+    if(/historia.?s studio|historia studio|studio foto|sewa studio/.test(q))
+      return "<strong>Historia's Studio</strong> menyediakan layanan studio foto dengan konsep yang dapat disesuaikan, termasuk kebutuhan birthday, maternity, prewedding, dan sesi foto lainnya.";
+
+    if(/historia snap|content creator|wedding content/.test(q))
+      return "<strong>Historia Snap</strong> menangani wedding content creator untuk kebutuhan konten selama acara, termasuk momen-momen yang siap digunakan untuk media sosial.";
+
+    if(/historia attire|attire|busana|baju pengantin/.test(q))
+      return "<strong>Historia Attire</strong> menangani kebutuhan busana wedding. Pilihan busana dapat disesuaikan dengan konsep acara dan kebutuhan pengantin.";
+
+    if(/dessy wedding|makeup|bridal|rias/.test(q)){
+      const s=packageSummary("makeup");
+      return `<strong>MUA Dessy Wedding</strong> menangani kebutuhan Makeup & Bridal. Untuk jalur konsultasi ini kamu tidak perlu mengisi jumlah tamu atau venue. ${s?`<br><br>Referensi awal:<br>${s}`:""}<br><br>Harga final tetap menyesuaikan tanggal, kebutuhan busana/rias, dan lokasi.`;
+    }
+
+    if(/essential|intimate/.test(q)){
+      const s=packageSummary("essential");
+      return `Untuk kebutuhan wedding yang lebih sederhana, kamu bisa melihat paket <strong>Essential</strong>. ${s?`<br><br>${s}`:""}<br><br>Kebutuhannya masih bisa disesuaikan lagi saat konsultasi.`;
+    }
+
+    if(/outdoor|tenda|garden|kebun/.test(q)){
+      const s=packageSummary("outdoor");
+      return `Untuk acara <strong>Outdoor</strong>, berikut beberapa paket yang tersedia:<br><br>${s||"Silakan lihat bagian Paket di halaman ini."}<br><br>Sistem juga bisa memberikan rekomendasi berdasarkan budget dan kebutuhan kamu.`;
+    }
+
+    if(/indoor|gedung|ballroom/.test(q)){
+      const s=packageSummary("indoor");
+      return `Untuk acara <strong>Indoor / Gedung</strong>, berikut beberapa referensi paket:<br><br>${s||"Silakan lihat bagian Paket di halaman ini."}<br><br>Venue, jumlah tamu, dan layanan yang dipilih akan memengaruhi rekomendasi.`;
+    }
+
+    if(/paket|harga|budget|berapa|biaya/.test(q)){
+      return "Kamu bisa mulai dari budget. Di website ini ada kategori <strong>Essential, Outdoor, Indoor, dan Makeup & Bridal</strong>. Buka bagian <strong>Rancang Pernikahanmu</strong>, isi kebutuhan dan budget, lalu sistem akan memberikan rekomendasi paket.";
+    }
+
+    if(/garut|bandung|luar kota|lokasi|area|wilayah|tasik|sumedang|cimahi/.test(q))
+      return "DWG melayani <strong>Garut dan luar kota</strong>. Untuk Jawa Barat, Garut, Bandung, Bandung Barat, Cimahi, Sumedang, Tasikmalaya, dan wilayah lain dapat dipilih di form lokasi. Untuk area lainnya, admin akan membantu konfirmasi biaya transportasi dan kebutuhan operasional.";
+
+    if(/custom|sesuai kebutuhan|ubah paket|tambah|kurang|fleksibel/.test(q))
+      return "Bisa. Paket DWG dapat <strong>disesuaikan</strong> dengan kebutuhan kamu. Tim akan membantu menyesuaikan layanan dan penawaran setelah konsultasi.";
+
+    if(/tanggal|available|kosong|jadwal|slot/.test(q))
+      return "Untuk <strong>cek ketersediaan tanggal</strong>, isi tanggal di form konsultasi lalu lanjut ke WhatsApp admin. Tim DWG akan mengecek jadwal terbaru.";
+
+    if(/wa|whatsapp|admin|cs|orang|hubungi/.test(q))
+      return "Klik tombol <strong>“Lanjut ke WhatsApp Admin”</strong> di bawah. Ringkasan chat akan ikut dikirim agar admin bisa melanjutkan konsultasi.";
+
+    return "Aku belum punya jawaban untuk pertanyaan itu. Aku bisa bantu soal <strong>paket, vendor DWG, area layanan, penyesuaian paket</strong>, atau mengarahkan kamu ke konsultasi online dan WhatsApp admin.";
+  }
+
+  function ask(text){
+    const clean=text.trim();
+    if(!clean) return;
+    addMessage(clean,"user");
+    input.value="";
+    setTimeout(()=>addMessage(answer(clean),"bot"),220);
+  }
+
+  form.addEventListener("submit",e=>{e.preventDefault();ask(input.value)});
+  chips.forEach(chip=>chip.addEventListener("click",()=>ask(chip.dataset.chat||"")));
+  actionChips.forEach(chip=>chip.addEventListener("click",()=>{
+    if(chip.dataset.action!=="consult") return;
+    addMessage("Konsultasi Online","user");
+    setTimeout(()=>addMessage("Siap. Aku buka form konsultasinya ya. Isi beberapa data singkat, lalu kamu akan mendapat rekomendasi awal.","bot"),120);
+    setTimeout(()=>{
+      window.toggleMissyChat(false);
+      document.getElementById("builder")?.scrollIntoView({behavior:"smooth",block:"start"});
+    },650);
+  }));
+  closeBtn?.addEventListener("click",()=>window.toggleMissyChat(false));
+
+  waBtn?.addEventListener("click",()=>{
+    const transcript=chatHistory.slice(-8).map(m=>`${m.who==="user"?"Customer":"Missy"}: ${m.text}`).join("\n");
+    const msg=`Halo Dessy Wedding Group 👋\n\nSaya datang dari website dan ingin melanjutkan konsultasi dengan admin.\n\nRingkasan chat dengan Missy:\n${transcript||"Belum ada pertanyaan khusus."}\n\nMohon dibantu ya.`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank","noopener,noreferrer");
+  });
+})();
+
+</script>
+</body>
+</html>
